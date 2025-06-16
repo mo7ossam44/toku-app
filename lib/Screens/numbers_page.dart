@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuku/Components/number_item.dart';
 import 'package:tuku/Models/Item_model.dart';
 
 class NumbersPage extends StatelessWidget {
@@ -13,20 +14,44 @@ class NumbersPage extends StatelessWidget {
     ),
     ItemModel(
       image: 'assets/images/numbers/number_two.png',
-      jpName: 'Ichi',
+      jpName: 'Ni',
       enName: 'two',
       sound: 'sound',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_three.png',
-      jpName: 'Ichi',
+      jpName: 'San',
       enName: 'three',
       sound: 'sound',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_four.png',
-      jpName: 'Ichi',
+      jpName: 'Shi',
       enName: 'four',
+      sound: 'sound',
+    ),
+    ItemModel(
+      image: 'assets/images/numbers/number_five.png',
+      jpName: 'Go',
+      enName: 'five',
+      sound: 'sound',
+    ),
+    ItemModel(
+      image: 'assets/images/numbers/number_six.png',
+      jpName: 'Roku',
+      enName: 'six',
+      sound: 'sound',
+    ),
+    ItemModel(
+      image: 'assets/images/numbers/number_seven.png',
+      jpName: 'Sebun',
+      enName: 'seven',
+      sound: 'sound',
+    ),
+    ItemModel(
+      image: 'assets/images/numbers/number_eight.png',
+      jpName: 'hachi',
+      enName: 'eight',
       sound: 'sound',
     ),
   ];
@@ -42,49 +67,11 @@ class NumbersPage extends StatelessWidget {
         backgroundColor: Colors.brown,
         iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: Container(
-        width: double.infinity,
-        height: 90,
-        color: Colors.orange,
-        child: Row(
-          children: [
-            Container(
-              color: Colors.amber.shade100,
-              child: Image.asset(itemModels[0].image),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    itemModels[0].jpName,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                  Text(
-                    itemModels[0].enName,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Spacer(),
-            IconButton(
-              padding: EdgeInsets.only(right: 20),
-              onPressed: () {},
-              icon: Icon(Icons.play_arrow, size: 30, color: Colors.white),
-            ),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: itemModels.length,
+        itemBuilder: (context, index) {
+          return NumbersItem(itemModel: itemModels[index]);
+        },
       ),
     );
   }
