@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tuku/Components/main_items.dart';
+import 'package:tuku/Screens/numbers_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +15,44 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.brown,
       ),
-      body: Column(
+      body: ListView(
         children: [
-          MainItems(text: 'Numbers', color: Colors.orange),
-          MainItems(text: 'Family Members', color: Colors.green),
-          MainItems(text: 'Colors', color: Colors.purple),
-          MainItems(text: 'Phrases', color: Colors.blue),
+          MainItems(
+            ontap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => NumbersPage()));
+            },
+            text: 'Numbers',
+            color: Colors.orange,
+          ),
+          MainItems(
+            ontap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => HomePage()));
+            },
+            text: 'Family Members',
+            color: Colors.green,
+          ),
+          MainItems(
+            ontap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => HomePage()));
+            },
+            text: 'Colors',
+            color: Colors.purple,
+          ),
+          MainItems(
+            ontap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => HomePage()));
+            },
+            text: 'Phrases',
+            color: Colors.blue,
+          ),
         ],
       ),
     );
