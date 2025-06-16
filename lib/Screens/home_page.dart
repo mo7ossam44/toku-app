@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tuku/Components/main_items.dart';
+import 'package:tuku/Screens/family_members_page.dart';
 import 'package:tuku/Screens/numbers_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
             ontap: () {
               Navigator.of(
                 context,
-              ).push(MaterialPageRoute(builder: (context) => HomePage()));
+              ).push(MaterialPageRoute(builder: (context) => FamilyMembersPage()));
             },
             text: 'Family Members',
             color: Colors.green,
