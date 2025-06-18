@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuku/Components/shared_container.dart';
 import 'package:tuku/Models/Item_model.dart';
 
 class Item extends StatelessWidget {
@@ -17,41 +18,13 @@ class Item extends StatelessWidget {
         children: [
           Container(
             color: Colors.amber.shade100,
-            child: Image.asset(itemModel.image),
+            child: Image.asset(itemModel.image!),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  itemModel.jpName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  itemModel.enName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Spacer(),
-          IconButton(
-            padding: EdgeInsets.only(right: 20),
-            onPressed: () {},
-            icon: Icon(Icons.play_arrow, size: 30, color: Colors.white),
-          ),
+          Expanded(child: SharedContainer(itemModel: itemModel, color: color)),
         ],
       ),
     );
   }
 }
+
+
