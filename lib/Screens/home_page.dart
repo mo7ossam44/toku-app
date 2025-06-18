@@ -13,22 +13,30 @@ class HomePage extends StatelessWidget {
     CategoryModel(
       categoryName: 'Numbers',
       color: Colors.orange,
-      // ontap: () =>
+      ontap: (context) => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => NumbersPage())),
     ),
     CategoryModel(
       categoryName: 'Family Members',
       color: Colors.green,
-      ontap: () => FamilyMembersPage(),
+      ontap: (context) => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => FamilyMembersPage())),
     ),
     CategoryModel(
       categoryName: 'Colors',
       color: Colors.purple,
-      ontap: () => ColorsPage(),
+      ontap: (context) => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => ColorsPage())),
     ),
     CategoryModel(
       categoryName: 'Phrases',
       color: Colors.blue,
-      ontap: () => PhrasesPage(),
+      ontap: (context) => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => PhrasesPage())),
     ),
   ];
 
