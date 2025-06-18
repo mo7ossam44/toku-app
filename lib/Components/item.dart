@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:tuku/Models/Item_model.dart';
 
-class NumbersItem extends StatelessWidget {
-  const NumbersItem({super.key, required this.itemModel});
+class Item extends StatelessWidget {
+  const Item({super.key, required this.itemModel, required this.color});
 
   final ItemModel itemModel;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 90,
-      color: Colors.orange,
+      color: color,
       child: Row(
         children: [
           Container(
