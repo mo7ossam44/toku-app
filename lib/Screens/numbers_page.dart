@@ -8,51 +8,45 @@ class NumbersPage extends StatelessWidget {
   final List<ItemModel> itemModels = [
     ItemModel(
       image: 'assets/images/numbers/number_one.png',
-      jpName: 'Ichi',
+      jpName: 'ichi',
       enName: 'one',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_one_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_two.png',
       jpName: 'Ni',
       enName: 'two',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_two_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_three.png',
       jpName: 'San',
       enName: 'three',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_three_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_four.png',
       jpName: 'Shi',
       enName: 'four',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_four_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_five.png',
       jpName: 'Go',
       enName: 'five',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_five_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_six.png',
       jpName: 'Roku',
       enName: 'six',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_six_sound.mp3',
     ),
     ItemModel(
       image: 'assets/images/numbers/number_seven.png',
       jpName: 'Sebun',
       enName: 'seven',
-      sound: 'sound',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_eight.png',
-      jpName: 'hachi',
-      enName: 'eight',
-      sound: 'sound',
+      sound: 'sounds/numbers/number_seven_sound.mp3',
     ),
   ];
 

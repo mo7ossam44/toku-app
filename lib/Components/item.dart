@@ -20,11 +20,11 @@ class Item extends StatelessWidget {
             color: Colors.amber.shade100,
             child: Image.asset(itemModel.image!),
           ),
-          Expanded(child: SharedContainer(itemModel: itemModel, color: color)),
+          Expanded(
+            child: SharedContainer(itemModel: itemModel, color: color),
+          ),
         ],
       ),
     );
   }
 }
-
-

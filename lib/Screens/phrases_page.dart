@@ -5,26 +5,26 @@ import 'package:tuku/Models/Item_model.dart';
 class PhrasesPage extends StatelessWidget {
   PhrasesPage({super.key});
 
-  List<ItemModel> phrasesList = [
+  final List<ItemModel> phrasesList = [
     ItemModel(
       jpName: 'kodoku suru koto o wesurenaide kudsi',
       enName: "don't forgot to subscribe",
-      sound: 'sound',
+      sound: 'sounds/phrases/dont_forget_to_subscribe.wav',
     ),
     ItemModel(
-      jpName: 'kodoku suru koto o wesurenaide kudsi',
-      enName: "don't forgot to subscribe",
-      sound: 'sound',
+      jpName: 'Watashi wa puroguramingu ga daisukidesu',
+      enName: "i love programming",
+      sound: 'sounds/phrases/i_love_programming.wav',
     ),
     ItemModel(
-      jpName: 'kodoku suru koto o wesurenaide kudsi',
-      enName: "don't forgot to subscribe",
-      sound: 'sound',
+      jpName: 'Puroguramingu wa kantandesu',
+      enName: "programming is easy",
+      sound: 'sounds/phrases/programming_is_easy.wav',
     ),
     ItemModel(
-      jpName: 'kodoku suru koto o wesurenaide kudsi',
-      enName: "don't forgot to subscribe",
-      sound: 'sound',
+      jpName: 'Doko ni iku no',
+      enName: "whare are you going",
+      sound: 'sounds/phrases/where_are_you_going.wav',
     ),
   ];
 

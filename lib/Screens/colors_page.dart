@@ -10,37 +10,37 @@ class ColorsPage extends StatelessWidget {
       image: 'assets/images/colors/color_black.png',
       jpName: 'Burakku',
       enName: 'black',
-      sound: 'sound',
+      sound: 'sounds/colors/black.wav',
     ),
     ItemModel(
       image: 'assets/images/colors/color_brown.png',
       jpName: 'Chairo',
       enName: 'brown',
-      sound: 'sound',
+      sound: 'sounds/colors/brown.wav',
     ),
     ItemModel(
       image: 'assets/images/colors/color_dusty_yellow.png',
       jpName: 'Hokori ppoi kiiro',
       enName: 'dusty yellow',
-      sound: 'sound',
+      sound: 'sounds/colors/dustyyellow.wav',
     ),
     ItemModel(
       image: 'assets/images/colors/color_gray.png',
       jpName: 'Gure',
       enName: 'gray',
-      sound: 'sound',
+      sound: 'sounds/colors/gray.wav',
     ),
     ItemModel(
       image: 'assets/images/colors/color_green.png',
       jpName: 'Midori',
       enName: 'green',
-      sound: 'sound',
+      sound: 'sounds/colors/green.wav',
     ),
     ItemModel(
       image: 'assets/images/colors/color_red.png',
       jpName: 'Aka',
       enName: 'red',
-      sound: 'sound',
+      sound: 'sounds/colors/red.wav',
     ),
   ];
 
@@ -49,7 +49,7 @@ class ColorsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Toku',
+          'Colors',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.brown,

@@ -4,7 +4,7 @@ import 'package:tuku/Models/category_model.dart';
 class MainItems extends StatelessWidget {
   MainItems({super.key, required this.categoryModel});
 
-  CategoryModel categoryModel;
+  final CategoryModel categoryModel;
 
   @override
   Widget build(BuildContext context) {

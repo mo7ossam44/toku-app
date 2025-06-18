@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tuku/Models/Item_model.dart';
 
@@ -16,7 +15,7 @@ class SharedContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: color,
-      height: 80,
+      height: 100,
       child: Row(
         children: [
           Padding(
@@ -30,7 +29,7 @@ class SharedContainer extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 17,
                   ),
                 ),
                 Text(
@@ -47,7 +46,9 @@ class SharedContainer extends StatelessWidget {
           Spacer(),
           IconButton(
             padding: EdgeInsets.only(right: 20),
-            onPressed: () {},
+            onPressed: () {
+              itemModel.playSound();
+            },
             icon: Icon(Icons.play_arrow, size: 30, color: Colors.white),
           ),
         ],
