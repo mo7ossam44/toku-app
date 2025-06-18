@@ -1,31 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:tuku/Models/category_model.dart';
 
 class MainItems extends StatelessWidget {
-  const MainItems({super.key, required this.text, required this.color, required this.ontap});
+  MainItems({super.key, required this.categoryModel});
 
-  final String text;
-  final Color color;
-  final VoidCallback ontap;
+  // final String text;
+  // final Color color;
+  // final VoidCallback ontap;
+
+  CategoryModel categoryModel;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ontap,
+      onTap: categoryModel.ontap,
       child: Container(
-          padding: EdgeInsets.only(left: 10),
-          alignment: Alignment.centerLeft,
-          color: color,
-          width: double.infinity,
-          height: 70,
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
+        padding: EdgeInsets.only(left: 10),
+        alignment: Alignment.centerLeft,
+        color: categoryModel.color,
+        width: double.infinity,
+        height: 70,
+        child: Text(
+          categoryModel.categoryName,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
         ),
+      ),
     );
   }
 }
