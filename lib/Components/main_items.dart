@@ -4,16 +4,12 @@ import 'package:tuku/Models/category_model.dart';
 class MainItems extends StatelessWidget {
   MainItems({super.key, required this.categoryModel});
 
-  // final String text;
-  // final Color color;
-  // final VoidCallback ontap;
-
   CategoryModel categoryModel;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: categoryModel.ontap,
+      onTap: () => categoryModel.ontap(context),
       child: Container(
         padding: EdgeInsets.only(left: 10),
         alignment: Alignment.centerLeft,
