@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tuku/Components/number_item.dart';
+import 'package:tuku/Components/item.dart';
 import 'package:tuku/Models/Item_model.dart';
 
 class NumbersPage extends StatelessWidget {
@@ -70,7 +70,7 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: itemModels.length,
         itemBuilder: (context, index) {
-          return NumbersItem(itemModel: itemModels[index]);
+          return Item(itemModel: itemModels[index], color: Colors.orange);
         },
       ),
     );
